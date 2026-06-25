@@ -1,65 +1,93 @@
-🪑 AR Furniture Placement App (Android + ARCore)
+🚀 AR Furniture Placement App — Setup Guide
 
-This is an Augmented Reality (AR) Android application built using Kotlin, Jetpack Compose, and ARCore.
-The app allows users to place and visualize 3D furniture models in real-world environments using their camera.
+This is an Android AR application built with Kotlin + Jetpack Compose + ARCore.
+Follow the steps below to download, set up, and run the project successfully.
 
-🚀 Features
-Real-time AR furniture placement using ARCore
-Multiple 3D GLB furniture models
-Jetpack Compose modern UI
-Smooth rendering with SceneView AR integration
-Touch-based object interaction in real space
-Lightweight and modular architecture
+📦 PART 1 — Required Setup
+🔹 Step 1: Install Android Studio
 
-🧰 Tech Stack
-Kotlin (Android Development)
-Jetpack Compose (UI)
-ARCore (Augmented Reality)
-SceneView (AR rendering engine)
-Gradle (Build system)
+Android Studio is required to run this project. It includes the IDE, SDK, and build tools.
 
-📦 Prerequisites
-Before running the project, make sure you have:
+Download Android Studio: https://developer.android.com/studio
+Install it using default settings
+Make sure Android SDK is included during installation
+First launch may take a few minutes to download additional components
 
-Android Studio Hedgehog (2023.1.1) or newer
-JDK 17+ (usually bundled with Android Studio)
-Android SDK Platform 34
-A physical Android device with ARCore support (recommended)
+🔹 Step 2: Install Required SDKs
+After opening Android Studio:
 
-🔗 ARCore supported devices:
-https://developers.google.com/ar/devices
+Go to:
+File > Settings > Appearance & Behavior > System Settings > Android SDK
+In SDK Platforms, ensure:
+Android 14 (API 34) ✔ required
+Android 7 (API 24) ✔ optional
+In SDK Tools, ensure:
+Android SDK Build-Tools 34
+Android SDK Platform-Tools
+Android Emulator (optional)
 
-⚙️ Setup Instructions
-1. Clone the repository
-git clone https://github.com/your-username/ARFurnish.git
+Click Apply → OK to install missing components.
 
-2. Open in Android Studio
-Launch Android Studio
+🔹 Step 3: Java (JDK)
+Android Studio includes a built-in JDK.
+
+If build issues occur:
+
+Go to:
+Settings > Build, Execution, Deployment > Build Tools > Gradle
+Set Gradle JDK → Android Studio Default
+
+📦 PART 2 — Download 3D Models
+The .glb 3D furniture models are not included in this repository due to large file size.
+
+👉 Download them from the provided Google Drive link.
+
+After downloading:
+
+Extract the folder (if compressed)
+You will find multiple .glb files (e.g., sofa.glb, chair.glb, etc.)
+Place them in the following directory:
+ARFurnish/
+ └── app/
+     └── src/
+         └── main/
+             └── assets/
+                 └── models/
+                     ├── sofa.glb
+                     ├── chair.glb
+                     ├── bookshelf.glb
+                     └── ...
+
+📌 If folders don’t exist, create them manually.
+
+⚠️ Without these files, AR features may fail or models will not load.
+
+📦 PART 3 — Open & Build Project
+
+🔹 Step 4: Open Project
+Open Android Studio
 Click Open Project
 Select the project folder
-Wait for Gradle sync to complete
-📱 Running the App
-🔹 Recommended (Physical Device)
-Enable Developer Options on your phone
+Wait for Gradle Sync to complete (may take a few minutes)
+
+🔹 Step 5: Enable Device Connection
+To run the app:
+
+Enable Developer Options
 Turn on USB Debugging
 Connect device via USB
-Select device in Android Studio
-Click Run ▶
-🔹 Emulator (Limited Support)
+Accept permission prompt when shown
 
-AR features may not work properly on emulators. Use only for UI testing.
-
-🏗 Build Commands
-Debug APK
-./gradlew assembleDebug
-Release APK
-./gradlew assembleRelease
-Install directly on device
+🔹 Step 6: Run the App
+Option A — Android Studio
+Select device from dropdown
+Click ▶ Run button
+Option B — Terminal
 ./gradlew installDebug
-⚠️ Important Notes
-This project requires a real ARCore-supported device for full functionality
-3D models are large assets and may be stored using Git LFS or external storage
-First build may take time due to Gradle dependency downloads
-📌 Summary
 
-This project demonstrates how Augmented Reality can be used for interior visualization, allowing users to place and interact with virtual furniture in real-world environments.
+📦 PART 4 — Using the App
+Grant camera permission
+Point device at a flat surface
+Move slowly to detect plane
+Tap to place furniture
+Use UI controls to switch models
