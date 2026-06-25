@@ -1,0 +1,49 @@
+# Gradle files
+.gradle/
+build/
+app/build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+.DS_Store
+Thumbs.db
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aar
+*.ap_
+*.aab
+output.json
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Keystore files
+# Never commit release or debug keystores to public repositories
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Secrets/credentials
+.env
+.env.*
+secrets.properties
+
+# Project-specific / Local Tools
+.claude/
+jdk.zip
+
+# 3D models (AR assets)
+app/src/main/assets/models/
+*.glb
