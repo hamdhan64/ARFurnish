@@ -101,15 +101,4 @@ Launch the app
 - Use UI controls to switch models
 
 
-######## Build Summary Commands
- # Clean project
-./gradlew clean
 
-# Build debug APK
-./gradlew assembleDebug
-
-# Build release APK
-./gradlew assembleRelease
-
-# Install directly
-./gradlew installDebug
