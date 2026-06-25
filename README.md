@@ -91,7 +91,7 @@ Clean Project (if errors occur)
 ## Install on Device / Emulator
 ./gradlew installDebug
 
-PART 📦 4 — Using the App
+## PART 📦 4 — Using the App
 
 Launch the app
 - Grant camera permission
